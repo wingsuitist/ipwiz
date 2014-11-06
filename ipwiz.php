@@ -22,7 +22,10 @@ if(filter_var($lookup, FILTER_VALIDATE_IP)) {
 echo 'looking up: '.$lookup."\n";
 echo 'host: '.$host."\n";
 echo 'ip: '.$ip."\n";
-echo 'mx: '.implode($mx, ', ')."\n";
+echo 'mx: ';
+foreach($mx as $mxRecord) {
+	echo $mxRecord.'('.gethostbyname($mxRecord).")\n";
+}
 echo 'ns: ';
 foreach($ns as $nsRecord) {
 	echo $nsRecord['target'].", ";
