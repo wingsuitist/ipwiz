@@ -6,6 +6,11 @@
  */
 
 $lookup = $argv[1];
+if(empty($lookup)) {
+	echo "Usage: ipwiz <somedomain>\n";
+	exit(1);
+}
+
 $mx = array();
 $ns = array();
 if(filter_var($lookup, FILTER_VALIDATE_IP)) {
