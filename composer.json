@@ -1,0 +1,12 @@
+{
+    "name": "wingsuitist/ipwiz",
+    "description": "Look up all IP and DNS stuff you need.",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "Jonas Felix",
+            "email": "jonas.felix@felixideas.com"
+        }
+    ],
+    "require": {}
+}
