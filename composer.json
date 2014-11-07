@@ -8,5 +8,6 @@
             "email": "jonas.felix@felixideas.com"
         }
     ],
+    "bin": ["bin/ipwiz"],
     "require": {}
 }
