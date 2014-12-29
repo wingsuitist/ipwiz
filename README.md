@@ -15,5 +15,7 @@ composer create-project -s dev wingsuitist/ipwiz ~/scripts/ipwiz dev-master
 
 
 -- copy --
-´export PATH=~/scripts/ipwiz/bin/:$PATH´
+
+export PATH=~/scripts/ipwiz/bin/:$PATH
+
 --paste --
