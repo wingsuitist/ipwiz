@@ -2,7 +2,9 @@
 
 /** 
  * copyright Jonas Felix 2014 <jonas.felix@felixideas.ch>
- * add GPLv3 note...
+ * 
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 $lookup = $argv[1];
