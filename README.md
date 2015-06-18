@@ -5,7 +5,13 @@ Lookup IP and DNS information for a domain.
 
 usage: ipwiz xxx
 
-Installation with composer:
+## Install using brew (recomended):
+
+brew install https://raw.githubusercontent.com/wingsuitist/ipwiz/master/homebrew/ipwiz.rb
+
+(It's not ready to put it in the global repository yet.)
+
+## Installation with composer:
 
 1. install composer
 2. install ipwiz in some folder (ie scripts/ipwiz)
