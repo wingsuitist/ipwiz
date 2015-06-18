@@ -16,7 +16,7 @@ class Ipwiz < Formula
     # ENV.deparallelize  # if your formula fails when building in parallel
 
     # Remove unrecognized options if warned by configure
-    prefix.instal "lib"
+    prefix.install "lib"
     bin.install ['bin/ipwiz']
   end
 
