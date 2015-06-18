@@ -22,17 +22,27 @@ if(filter_var($lookup, FILTER_VALIDATE_IP)) {
 } else {
 	$ip = gethostbyname($lookup);
 	$host = gethostbyaddr($ip);
-	getmxrr($lookup, $mx);
-	$ns = dns_get_record($lookup, DNS_NS);
+	
+	$lookupParts = explode('.', $lookup);
+	$partsCount = count($lookupParts);
+	$position = $partsCount;
+	do {
+		$domain = implode('.', array_slice($lookupParts, $partsCount - $position));
+		getmxrr($domain, $mx);
+		$ns = dns_get_record($domain, DNS_NS);
+		$position--;
+	} while(empty($ns) && $position > 0); 
 }
 
 echo 'looking up: '.$lookup."\n";
 echo 'host: '.$host."\n";
 echo 'ip: '.$ip."\n";
+echo 'domain: '.$domain."\n";
 echo 'mx: ';
 foreach($mx as $mxRecord) {
-	echo $mxRecord.'('.gethostbyname($mxRecord).")\n";
+	echo $mxRecord.'('.gethostbyname($mxRecord).' ';
 }
+echo "\n";
 echo 'ns: ';
 foreach($ns as $nsRecord) {
 	echo $nsRecord['target'].", ";
