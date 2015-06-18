@@ -7,11 +7,12 @@
  * file that was distributed with this source code.
  */
 
-$lookup = $argv[1];
-if(empty($lookup)) {
+
+if(empty($argv[1])) {
 	echo "Usage: ipwiz <somedomain>\n";
 	exit(1);
 }
+$lookup = $argv[1];
 
 $mx = array();
 $ns = array();
