@@ -13,6 +13,9 @@ if(empty($argv[1])) {
 	exit(1);
 }
 $lookup = $argv[1];
+$lookup = str_replace('http:', '', $lookup);
+$lookup = str_replace('https:', '', $lookup);
+$lookup = str_replace('/', '', $lookup);
 
 $mx = array();
 $ns = array();
