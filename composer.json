@@ -1,7 +1,7 @@
 {
     "name": "wingsuitist/ipwiz",
     "description": "Look up all IP and DNS stuff you need.",
-    "license": "GPLv3",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Jonas Felix",
